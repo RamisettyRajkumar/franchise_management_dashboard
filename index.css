@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors duration-150 ease-in-out;
+  }
+  
+  .sidebar-link.active {
+    @apply bg-primary-100 text-primary-600;
+  }
+  
+  .sidebar-link:hover:not(.active) {
+    @apply bg-gray-100 text-gray-800;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-card p-4;
+  }
+  
+  .progress-pill {
+    @apply inline-flex items-center px-2 py-1 text-xs font-medium rounded-full;
+  }
+  
+  .progress-pill.positive {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .progress-pill.neutral {
+    @apply bg-blue-100 text-blue-800;
+  }
+  
+  .btn {
+    @apply px-3 py-1.5 text-sm font-medium rounded-md transition-colors duration-150 ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+  }
+}
